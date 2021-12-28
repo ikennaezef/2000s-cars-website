@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+	--primary-font: 'Oswald', sans-serif;
+	--secondary-font: 'Lato', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+}
+
+body {
+	font-size: 1.2rem;
+	font-family: var(--secondary-font);
+	background-color: #f9f9f9;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1100px;
+	margin: auto;
+	overflow: auto;
+	padding: 0 2rem;
+}
+
+.main-header {
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family: var(--primary-font);
+	padding: 2rem;
+}
+
+.main-header h1 {
+	font-size: 4rem;
+	margin-bottom: 1rem;
+	line-height: 1.2;
+}
+
+.main-header h1 span {
+	color: #69c;
+}
+
+.main-header p {
+	font-size: 2rem;
+}
+
+img {
+	width: 100%;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+	margin-bottom: 2rem;
+	background: #eeeef1;
+}
+
+.card img {
+	max-height: 400px;
+	object-fit: contain;
+}
+
+.card h2 {
+	margin-bottom: 2rem;
+	font-size: 2rem;
+	font-family: var(--primary-font);
+}
+
+.card div {
+	padding: 2rem;
+}
+
+.card div p {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+
+.card div a {
+	background-color: #69c;
+	border: 1px solid #69c;
+	color: #fff;
+	font-family: var(--primary-font);
+	padding: .8rem 1.5rem;
+	transition: all 0.2s ease;
+}
+
+.card div a:hover {
+	background-color: transparent;
+	color: #69c;
+}
+
+.card:nth-child(even) img {
+	order: 2;
+}
+
+
+@media(max-width: 700px) {
+	.card{
+		display: block;
+	}
+}
+
+
+/* STYLING FOR SINGLE PAGES */
+
+#single-body #single-nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #333;
+	font-family: var(--primary-font);
+	height: 15vh;
+	margin-bottom: 1rem;
+}
+
+#single-nav a {
+	color: #fff;
+	font-size: 2rem;
+}
+
+#single-nav a:hover {
+	text-decoration: 1px underline;
+}
+
+#single-body .container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+	padding: 1rem;
+	background-color: #eee;
+}
+
+.img-gallery {
+	border: 1px solid black;
+	padding: 2px;
+}
+
+.img-gallery .main-img {
+	height: 400px;
+	width: 550px;
+}
+
+.small-imgs {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.small-imgs .img-small {
+	width: 130px;
+	height: 100px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.details {
+	padding: 1rem;
+}
+
+.car-name {
+	font-family: var(--primary-font);
+	font-size: 2.2rem;
+	letter-spacing: 1.2px;
+	margin-bottom: 2rem;
+}
+
+.car-about {
+	margin-bottom: 1.2rem;
+}
+
+.specs h4 {
+	font-size: 1.8rem;
+	font-family: var(--primary-font);
+	margin-bottom: 1rem;
+}
+
+.specs p {
+	font-weight: bold;
+}
+
+.specs span {
+	font-weight: normal;
+}
+
+@media (max-width: 700px) {
+	#single-body .container {
+		grid-template-columns: 1fr;
+		grid-gap: 2rem;
+	}
+}
+
+/* Image gallery effects*/
+
+.faded {
+	opacity: 0;
+	animation: fade 0.5s ease-in forwards;
+}
+
+@keyframes fade {
+	to{
+		opacity: 1;
+	}
+}
